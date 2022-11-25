@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 COPY dependency.txt ./
 RUN pip install --no-cache-dir -r dependency.txt
 COPY . .
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./alationwebcounterassignment.py" ]
