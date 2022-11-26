@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-webcounter-altion-loadbalancer
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+      app: dev-webcounter-altion
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-node
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+    protocol: TCP
+    targetPort: 6379
+  selector:
+      app: redis

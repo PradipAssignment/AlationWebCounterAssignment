@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-webcounter-altion-deployment
+  labels:
+    app: dev-webcounter-altion
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dev-webcounter-altion
+  template:
+    metadata:
+      labels:
+        app: dev-webcounter-altion
+    spec:
+      containers:
+      - name: dev-webcounter-altion
+        image: pdpatel/dev-webcounter-altion
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "300m" 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:3.2-alpine
+        ports:
+        - containerPort: 6379
