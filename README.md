@@ -4,6 +4,13 @@
 
 [SRE Assignment Solutions.pdf](https://github.com/PradipAssignment/AlationWebCounterAssignment/files/10097107/SRE.Assignment.Solutions.pdf)
 
+# K8s files 
+Dockerfile <br />
+alationwebcounterreplicset.yml <br />
+alationloadbalancer.yml <br />
+k8s.tf <br />
+providers.tf <br />
+
 # Terraform Related files:
 gcp-miniqube-vm.tf  <br />
 gcp-miniqube-vm-dev-vars.tfvars  <br />
@@ -13,13 +20,8 @@ terraform.tfstate.backup <br />
 terraform.tfstate <br />
 .terraform.lock.hcl <br />
 google <br />
-</sub> <br />
+
 # Python files
 alationwebcounterassignment.py <br />
 dependency.txt <br />
-# K8s files 
-Dockerfile <br />
-alationwebcounterreplicset.yml <br />
-alationloadbalancer.yml <br />
-k8s.tf <br />
-providers.tf <br />
+
